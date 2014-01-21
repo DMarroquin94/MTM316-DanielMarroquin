@@ -183,7 +183,7 @@
 						else if(myXML.forecast.time[i].symbol.@number == 803) // broken clouds
 							InstancesMC[i].gotoAndStop(8); */
  						else if(myXML.forecast.time[i].symbol.@number < 742 || myXML.forecast.time[i].symbol.@number > 700) // fog
-							InstancesMC[i].gotoAndStop(3);
+							InstancesMC[i].gotoAndStop(2);
 						
 						SetUpDay(InstancesMC[i]);
 						InstancesMC[i].Date.text = myXML.forecast.time[i].@day.substr(5, 5);
