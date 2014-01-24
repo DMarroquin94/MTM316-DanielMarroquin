@@ -63,19 +63,19 @@
 				"Friday",
 				"Saturday"
 			];
-			Master_MC = new MasterMC;
+			
 				
 			
 			myLoader.load(new URLRequest("http://api.openweathermap.org/data/2.5/forecast/daily?q=Salt+Lake+City,UT&mode=xml&units=imperial&cnt=7&nocache="+ new Date().getTime()));
-			Master_MC.LoadingText.visible = true;
+			//Master_MC.LoadingText.visible = true;
 			myLoader.addEventListener(Event.COMPLETE, processXML);
 			
 		}
 		
 		public function setStage(): void {
 			
-		if (once == 0) 		{
-			once++;
+		if (Master_MC == null) 		{
+			Master_MC = new MasterMC;
 			Master_MC.Location.selectable = false;
 				Master_MC.ErrorText.selectable = false;
 				Master_MC.x = 0;
