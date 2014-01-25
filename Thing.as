@@ -454,7 +454,6 @@
 			//tf3.bold = false;
 				tf3.font = "Arial";
 			
-			
 				//buttonText2  = new TextField();
 				tf3.size = 12;
 				buttonText.x = 532;
@@ -477,7 +476,7 @@
 			if (state == null)
 				Master_MC.ErrorText.visible = true;
 			else {
-				Master_MC.ErrorText.visible = false;
+				Master_MC.ErrorText.visible = false;  
 			comfirmCity.load(new URLRequest("http://api.sba.gov/geodata/primary_city_links_for_state_of/"+state+".xml"));
 			comfirmCity.addEventListener(Event.COMPLETE, ComfirmXML);
 			}
@@ -493,7 +492,7 @@
 					match = true;
 		
 			}
-			if (match ) {
+			if (match) {
 				var myLoader:URLLoader = new URLLoader();
 				
 				myLoader.load(new URLRequest("http://api.openweathermap.org/data/2.5/forecast/daily?q="+ textLocation.text +"&mode=xml&units=imperial&cnt=7&nocache="+ new Date().getTime()));
